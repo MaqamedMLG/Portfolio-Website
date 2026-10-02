@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Mahammad Ismayilov — AI researcher, KTU PhD candidate and academic assistant working across signal-aware deep learning, medical imaging and image reconstruction."
+    />
+    <meta name="author" content="Mahammad Ismayilov" />
+    <meta name="theme-color" content="#f3f2ed" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mahammad Ismayilov — AI Researcher & Educator" />
+    <meta
+      property="og:description"
+      content="Signal-aware AI for image reconstruction, medical imaging and multimodal sensing."
+    />
+    <meta property="og:image" content="./assets/mahammad-ismayilov-graduation-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <title>Mahammad Ismayilov — AI Researcher & Educator</title>
+    <script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let saved = null;
+        try { saved = localStorage.getItem('mi-theme'); } catch (_) {}
+        const preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mahammad Ismayilov",
+        "jobTitle": "AI Researcher, Junior Assistant and PhD Candidate",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Kaunas University of Technology"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Kaunas University of Technology"
+        },
+        "email": "mailto:mahammad.ismayilov@ktu.lt",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kaunas",
+          "addressCountry": "Lithuania"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/mahammad-ismayilov-9aabab1ba/",
+          "https://orcid.org/0009-0000-0212-7628",
+          "https://www.researchgate.net/profile/Mahammad-Ismayilov",
+          "https://www.instagram.com/maqamedmlg/",
+          "https://www.facebook.com/MaqamedMLG/"
+        ],
+        "knowsAbout": [
+          "Artificial intelligence",
+          "Deep learning",
+          "Image reconstruction",
+          "Medical image analysis",
+          "Signal processing",
+          "Wavelet transforms",
+          "Explainable AI"
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-DvF53UAD.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-ClCWFuXx.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="#top" aria-label="Mahammad Ismayilov — home">
+          <span class="brand-mark" aria-hidden="true">MI</span>
+          <span class="brand-copy">
+            <strong>Mahammad Ismayilov</strong>
+            <span>AI Researcher · Junior Assistant</span>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"></path>
+            </svg>
+          </button>
+          <a class="button button-small button-dark nav-contact" href="#contact">Let’s talk</a>
+          <button
+            class="icon-button menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            data-menu-toggle
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+        <a href="#research">Research <span>01</span></a>
+        <a href="#projects">Projects <span>02</span></a>
+        <a href="#experience">Experience <span>03</span></a>
+        <a href="#about">About <span>04</span></a>
+        <a href="#contact">Contact <span>05</span></a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="signal-canvas" data-signal-canvas aria-hidden="true"></canvas>
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              PhD Candidate · KTU Faculty of Informatics
+            </div>
+            <h1 id="hero-title">
+              I'm here to ensure your tech works
+              <em>for you,</em>
+              not against you.
+            </h1>
+            <p class="hero-lead">
+              I am Mahammad Ismayilov — enthusiastic Computer Science student driven by solving technical puzzles and enhancing user experiences. My intrinsic motivation lies in navigating through IT challenges, not just resolving them but understanding them to future-proof our digital interactions.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#research">
+                Explore my research
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+              <a class="button button-ghost" href="./Ismayilov_CV.pdf" download>
+                Download CV
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" data-tilt>
+            <div class="hero-photo-frame">
+              <img
+                src="./assets/mahammad-ismayilov-graduation-portrait.jpg"
+                alt="Mahammad Ismayilov in KTU graduation robes holding his diploma"
+                width="1132"
+                height="1536"
+                fetchpriority="high"
+              />
+              <div class="photo-shade" aria-hidden="true"></div>
+              <div class="photo-caption">
+                <span>Kaunas, Lithuania</span>
+                <strong>BSc Informatics ’24 · MSc Artificial Intelligence’26 · PhD Informatics’30</strong>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card-bottom">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span>Open to research collaborations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container metrics-strip reveal" aria-label="Selected academic metrics">
+          <div class="metric">
+            <span class="metric-value">8.1<small>/10</small></span>
+            <span class="metric-label">BSc final GPA</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">9.62<small>/10</small></span>
+            <span class="metric-label">MSc final GPA</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">02</span>
+            <span class="metric-label">Published journal articles</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">01</span>
+            <span class="metric-label">Conference proceeding</span>
+          </div>
+          <div class="metric-note">
+            <span class="metric-note-line" aria-hidden="true"></span>
+            BSc in Informatics, MSc in Artificial Intelligence and a doctoral path in signal-aware visual intelligence.
+          </div>
+        </div>
+      </section>
+
+      <section class="section research-section" id="research" aria-labelledby="research-title">
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <span class="section-kicker">01 · Research</span>
+              <h2 id="research-title">Signal-aware intelligence for consequential images.</h2>
+            </div>
+            <p>
+              My work asks a practical question: how can deep models preserve meaningful spatial and frequency information while remaining efficient, interpretable and useful in the real world?
+            </p>
+          </header>
+
+          <article class="phd-feature reveal">
+            <div class="phd-copy">
+              <div class="status-pill"><span></span> PhD research · 2026 — present</div>
+              <h3>Development of algorithms based on deep neural networks and signal processing technologies for image reconstruction</h3>
+              <p>
+                At KTU, my doctoral direction focuses on developing algorithms that unite signal-processing priors with deep neural networks to reconstruct incomplete or degraded visual information. The research is positioned for medical, satellite and immersive-imaging contexts.
+              </p>
+            </div>
+            <div class="phd-visual" aria-hidden="true">
+              <div class="wavelet-stage stage-one"><span></span><span></span><span></span><span></span></div>
+              <div class="stage-arrow">→</div>
+              <div class="wavelet-stage stage-two"><span></span><span></span><span></span><span></span></div>
+              <div class="stage-arrow">→</div>
+              <div class="reconstruction-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="visual-axis axis-x">spatial information</div>
+              <div class="visual-axis axis-y">frequency detail</div>
+            </div>
+          </article>
+
+          <div class="publication-collections">
+            <section class="publication-group" aria-labelledby="journal-articles-title">
+              <header class="publication-group-head reveal">
+                <div>
+                  <span>Publications · 01</span>
+                  <h3 id="journal-articles-title">Journal articles</h3>
+                </div>
+                <p><strong>02</strong> published articles</p>
+              </header>
+
+              <div class="journal-grid">
+                <article class="research-card journal-card reveal">
+                  <div class="card-index">A / 01</div>
+                  <div class="research-art wavelet-art" aria-hidden="true">
+                    <div class="wavelet-tile tile-ll">LL</div>
+                    <div class="wavelet-tile tile-lh">LH</div>
+                    <div class="wavelet-tile tile-hl">HL</div>
+                    <div class="wavelet-tile tile-hh">HH</div>
+                    <svg viewBox="0 0 280 180"><path d="M15 142C52 142 57 49 94 49s43 83 80 83 44-101 91-101"></path></svg>
+                  </div>
+                  <div class="research-card-body">
+                    <h3>Integration of Multi-Level Wavelet Decomposition and CNN for Brain Tumor MRI Classification</h3>
+                    <p>
+                      A multi-level architecture that integrates 2D Haar decomposition directly into a CNN, preserving directional detail across scales while using fewer parameters than the baseline model.
+                    </p>
+                    <ul class="tag-list" aria-label="Methods">
+                      <li>Haar wavelets</li><li>CNN</li><li>MRI</li><li>Grad-CAM</li>
+                    </ul>
+                    <a class="text-link" href="https://doi.org/10.3390/app16094482" target="_blank" rel="noreferrer">
+                      Read the article
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="research-card journal-card reveal">
+                  <div class="card-index">A / 02</div>
+                  <div class="research-art sensor-art" aria-hidden="true">
+                    <svg viewBox="0 0 500 280"><path d="M104 70 250 140 398 62M250 140l150 76"></path></svg>
+                    <div class="sensor-node sensor-thermal"><i></i><span>Thermal video</span></div>
+                    <div class="sensor-node sensor-milking"><i></i><span>Milking records</span></div>
+                    <div class="sensor-node sensor-bolus"><i></i><span>Rumen bolus</span></div>
+                    <div class="sensor-core"><span>AI</span><small>fusion</small></div>
+                  </div>
+                  <div class="research-card-body">
+                    <h3>Fusing heterogeneous sensor data for real-time livestock anomaly detection</h3>
+                    <p>
+                      A real-time health-monitoring framework fusing thermal video, milking-system records and rumen-bolus sensor data. My contribution spans conceptualization, software development and original-draft preparation.
+                    </p>
+                    <ul class="tag-list" aria-label="Methods">
+                      <li>Sensor fusion</li><li>Edge AI</li><li>Explainability</li>
+                    </ul>
+                    <a class="text-link" href="https://www.sciencedirect.com/science/article/pii/S0022030226032923?via%3Dihub" target="_blank" rel="noreferrer">
+                      Read the article
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="publication-group publication-group-proceedings" aria-labelledby="conference-proceeding-title">
+              <header class="publication-group-head reveal">
+                <div>
+                  <span>Publications · 02</span>
+                  <h3 id="conference-proceeding-title">Conference proceeding</h3>
+                </div>
+                <p><strong>01</strong> published proceeding</p>
+              </header>
+
+              <article class="proceeding-card reveal">
+                <div class="proceeding-visual" aria-hidden="true">
+                  <span class="proceeding-series">LMITT</span>
+                  <strong>2025</strong>
+                  <div class="proceeding-wavelet"><i></i><i></i><i></i><i></i></div>
+                  <small>Vilnius University Open Series</small>
+                </div>
+                <div class="research-card-body">
+                  <h3>Integration of image decomposition methods and CNN for image classification</h3>
+                  <p>
+                    An experimental study of 1-, 2- and 3-level Haar decomposition on MNIST, showing how frequency-aware input representations can reduce dimensionality and model size without sacrificing competitive performance.
+                  </p>
+                  <ul class="tag-list" aria-label="Methods">
+                    <li>Image decomposition</li><li>MNIST</li><li>Model efficiency</li>
+                  </ul>
+                  <a class="text-link" href="https://doi.org/10.15388/LMITT.2025.6" target="_blank" rel="noreferrer">
+                    View conference paper
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+                  </a>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </section>
+
+<section class="section projects-section" id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <header class="section-heading reveal">
+      <div>
+        <span class="section-kicker">02 · Selected work</span>
+        <h2 id="projects-title">Research translated into useful systems.</h2>
+      </div>
+
+      <p>
+        Alongside publications, I work on prototypes and applied systems that connect AI research with students, universities and real operational settings.
+      </p>
+    </header>
+
+    <div class="filter-bar reveal" role="group" aria-label="Filter selected work">
+      <button
+        type="button"
+        class="filter-button is-active"
+        data-filter="all"
+        aria-pressed="true"
+      >
+        All work
+      </button>
+
+      <button
+        type="button"
+        class="filter-button"
+        data-filter="research"
+        aria-pressed="false"
+      >
+        Research
+      </button>
+
+      <button
+        type="button"
+        class="filter-button"
+        data-filter="community"
+        aria-pressed="false"
+      >
+        University impact
+      </button>
+    </div>
+
+    <div class="project-grid" data-project-grid>
+
+      <!-- PROJECT 01 -->
+      <article
+        class="project-card project-card-dark reveal"
+        data-category="research community"
+      >
+        <div class="project-topline">
+          <span class="project-number">01</span>
+
+          <span class="award-label">
+            <i></i>
+            ECIU award winner
+          </span>
+        </div>
+
+        <div class="project-icon aris-icon" aria-hidden="true">
+          <span>A</span>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+
+        <div class="project-content">
+          <span class="project-type">
+            Conversational AI · 2025
+          </span>
+
+          <h3>
+            ARIS — Adaptive Recommendation & Interview System
+          </h3>
+
+          <p>
+            An AI assistant guiding new ECIU students toward relevant challenges,
+            micromodules, green mobility and accommodation options through a
+            personalized interview flow.
+          </p>
+
+          <ul class="tag-list tag-list-dark">
+            <li>LangGraph</li>
+            <li>RAG</li>
+            <li>MoE routing</li>
+            <li>Copilot Studio</li>
+          </ul>
+        </div>
+      </article>
+
+
+      <!-- PROJECT 02 -->
+      <article
+        class="project-card reveal"
+        data-category="community"
+      >
+        <div class="project-topline">
+          <span class="project-number">02</span>
+          <span class="project-year">2025—now</span>
+        </div>
+
+        <div class="project-content">
+          <span class="project-type">
+            Digital platform · KTU Alumni
+          </span>
+
+          <h3>
+            Alumni experience & AI-assisted communication
+          </h3>
+
+          <p>
+            Improved content architecture, accessibility and website
+            functionality while investigating an AI chatbot for alumni support,
+            information discovery and FAQ automation.
+          </p>
+
+          <ul class="tag-list">
+            <li>WordPress</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+          </ul>
+        </div>
+
+        <div
+          class="project-corner-graphic web-graphic"
+          aria-hidden="true"
+        >
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <span class="section-kicker">03 · Experience</span>
+              <h2 id="experience-title">Research, teaching and service — together.</h2>
+            </div>
+            <p>
+              I care about both sides of academic work: advancing a technical idea and making it understandable enough for someone else to use, question and improve.
+            </p>
+          </header>
+
+          <div class="experience-layout">
+            <article class="experience-overview reveal">
+              <div class="experience-overview-image">
+                <img
+                  src="./assets/mahammad-ismayilov-thesis-defense.jpg"
+                  alt="Mahammad presenting his master's research on wavelet transforms and neural networks"
+                  width="912"
+                  height="1536"
+                  loading="lazy"
+                />
+              </div>
+              <div class="experience-overview-copy">
+                <span class="section-kicker">How I work</span>
+                <h3>Academic thinking, practical delivery.</h3>
+                <p>
+                  My experience connects university teaching and research with community leadership, customer support and hands-on systems administration.
+                </p>
+                <div class="experience-pill-row" aria-label="Experience areas">
+                  <span>Teaching & research</span><span>University engagement</span><span>Technical systems</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="timeline" aria-label="Professional experience">
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Sep 2026<br />— present</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">KTU Faculty of Informatics</span>
+                  <h3>Junior Assistant · part-time</h3>
+                  <ul class="experience-points">
+                    <li>Teach and support students in MATLAB and Cisco Packet Tracer laboratory classes.</li>
+                    <li>Prepare and update learning materials and laboratory tasks for the Computer Networks course.</li>
+                    <li>Conduct research in the research group, contributing to journal articles and a conference proceedings paper.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>Scientific Research</li><li>MATLAB</li><li>Simulink</li><li>Cisco Packet Tracer</li><li>Moodle</li><li>TCP/IP</li><li>Oracle VM VirtualBox</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Feb 2026<br />— Jul 2026</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">KTU Faculty of Informatics</span>
+                  <h3>Academic Assistant · part-time</h3>
+                  <ul class="experience-points">
+                    <li>Prepared and improved Moodle teaching materials and assisted with evaluation workflows.</li>
+                    <li>Conducted laboratory sessions on operating-system subsystems, Shell and C scripting for automation.</li>
+                    <li>Contributed to a research group preparing a scientific journal article.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>Bash / Shell</li><li>C</li><li>Git</li><li>PuTTY</li><li>Moodle</li><li>Scientific research</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Aug 2025<br />— present</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">KTU Alumni Centre</span>
+                  <h3>International Relations Coordinator · part-time</h3>
+                  <ul class="experience-points">
+                    <li>Designs and plans alumni and student events from concept through delivery.</li>
+                    <li>Leads collaborative work across teams and university departments.</li>
+                    <li>Creates project videos that strengthen alumni and student engagement.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>WordPress</li><li>HTML / CSS</li><li>JavaScript</li><li>PHP</li><li>Canva</li><li>CapCut</li><li>Office 365</li><li>Event management tools</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Jun 2024<br />— Feb 2026</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">KTU Faculty of Informatics</span>
+                  <h3>Teaching Assistant · voluntary</h3>
+                  <ul class="experience-points">
+                    <li>Delivered lectures on TCP/IP, routing algorithms and subnetting.</li>
+                    <li>Guided students through PHP, SQL and XAMPP-based web development.</li>
+                    <li>Supervised semester projects in Cisco Packet Tracer.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>TCP/IP</li><li>PHP</li><li>SQL</li><li>XAMPP</li><li>Oracle VM VirtualBox</li><li>Cisco Packet Tracer</li><li>Moodle</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">May 2024<br />— Sep 2024</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">Salesforge · Vilnius, Lithuania</span>
+                  <h3>Technical Support Specialist · full-time</h3>
+                  <ul class="experience-points">
+                    <li>Resolved more than 500 customer issues through Intercom and Slack while maintaining high satisfaction.</li>
+                    <li>Managed domain authentication and DNS setups to improve email-delivery reliability.</li>
+                    <li>Analysed SQL-based queries for database-related troubleshooting.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>SQL</li><li>DNS configuration</li><li>Intercom</li><li>Email infrastructure</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Feb 2024<br />— May 2024</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">Edgard & Cooper · Kortrijk, Belgium</span>
+                  <h3>IT Support Specialist · Erasmus+ internship</h3>
+                  <ul class="experience-points">
+                    <li>Handled more than 300 Zendesk tickets covering hardware, software and user accounts.</li>
+                    <li>Automated Azure AD workflows with PowerShell and deployed applications through Intune.</li>
+                    <li>Audited more than 300 Intune records for security compliance.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>Azure AD</li><li>PowerShell</li><li>Git</li><li>Microsoft Intune</li><li>Zendesk</li><li>MS 365 Admin Center</li><li>Jira</li><li>Agile</li></ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Jun 2023<br />— Aug 2023</div>
+                <div class="timeline-marker"><span></span></div>
+                <div class="timeline-content">
+                  <span class="timeline-org">SUKANAL ETLI · Baku, Azerbaijan</span>
+                  <h3>System Administrator · Erasmus+ internship</h3>
+                  <ul class="experience-points">
+                    <li>Upgraded hardware for more than 100 PCs and configured Active Directory on Windows Server.</li>
+                    <li>Troubleshot network issues and created router backups using Cisco tools and PuTTY.</li>
+                    <li>Supported VPN, DHCP and DNS configurations and provided remote IT support.</li>
+                  </ul>
+                  <ul class="inline-skills"><li>Windows Server 2016</li><li>Cisco Packet Tracer</li><li>DHCP</li><li>DNS</li><li>PuTTY</li><li>Oracle VM VirtualBox</li></ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education-section" id="education" aria-labelledby="education-title">
+        <div class="container">
+          <header class="section-heading section-heading-light reveal">
+            <div>
+              <span class="section-kicker">04 · Education & recognition</span>
+              <h2 id="education-title">Built at KTU. Ready for the next question.</h2>
+            </div>
+            <p>
+              My BSc in Informatics and MSc in Artificial Intelligence at KTU built the foundation for a PhD focused on deep neural networks, signal processing and image reconstruction.
+            </p>
+          </header>
+
+          <div class="education-grid">
+            <div class="degree-list">
+              <article class="degree-card degree-card-phd reveal">
+                <div class="degree-year">2026—present</div>
+                <div>
+                  <span class="degree-level">Doctor of Science</span>
+                  <h3>Informatics</h3>
+                  <p>Kaunas University of Technology · PhD programme</p>
+                  <div class="degree-thesis">
+                    <span>Dissertation topic</span>
+                    Development of algorithms based on deep neural networks and signal processing technologies for image reconstruction
+                  </div>
+                </div>
+                <span class="degree-grade degree-grade-phd">PhD</span>
+              </article>
+
+              <article class="degree-card reveal">
+                <div class="degree-year">2024—2026</div>
+                <div>
+                  <span class="degree-level">Master of Computing</span>
+                  <h3>Artificial Intelligence in Computer Science</h3>
+                  <p>Kaunas University of Technology · GPA 9.62/10</p>
+                  <div class="degree-thesis">
+                    <span>Thesis</span>
+                    Research of Image Classification Based on the Interaction of Wavelet Transforms and Artificial Neural Networks
+                  </div>
+                </div>
+                <span class="degree-grade degree-grade-score">9.62</span>
+              </article>
+
+              <article class="degree-card reveal">
+                <div class="degree-year">2020—2024</div>
+                <div>
+                  <span class="degree-level">Bachelor of Computing</span>
+                  <h3>Informatics</h3>
+                  <p>Kaunas University of Technology · GPA 8.1/10</p>
+                  <div class="degree-thesis">
+                    <span>Thesis</span>
+                    System for Isolation and Classification of Environmental Sounds
+                  </div>
+                </div>
+                <span class="degree-grade degree-grade-score">8.1</span>
+              </article>
+            </div>
+
+            <figure class="graduation-photo reveal">
+              <img
+                src="./assets/ktu-graduation-class-2026.jpg"
+                alt="KTU graduates celebrating at the 2026 graduation ceremony"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>KTU Graduation Ceremony · 2026</span>
+                <strong>The place where student, researcher and teacher became one path.</strong>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="awards-row reveal" aria-label="Awards and scholarships">
+            <div class="award-item"><span>2026—30</span><strong>Lithuanian State-Funded Doctoral Scholarship</strong><small>Government of the Republic of Lithuania</small></div>
+            <div class="award-item"><span>2025</span><strong>Applicability to ECIU University Award</strong><small>ECIU AI Assistant Hackathon</small></div>
+            <div class="award-item"><span>2025</span><strong>Alumni Association Scholarship</strong><small>KTU</small></div>
+            <div class="award-item"><span>2024</span><strong>Lithuanian State Scholarship</strong><small>Švietimo Mainų Paramos Fondas</small></div>
+            <div class="award-item"><span>2023—26</span><strong>University's Talent Scholarship</strong><small>KTU</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="container about-shell">
+          <header class="about-heading reveal">
+            <div class="about-intro">
+              <span class="section-kicker">05 · About</span>
+              <h2 id="about-title">From Baku to Kaunas — built across signals, systems and people.</h2>
+            </div>
+            <div class="about-heading-copy">
+              <p>
+                I came to Lithuania from Azerbaijan to study informatics. KTU became the place where I learned to research, teach, collaborate and build a professional life with purpose.
+              </p>
+            </div>
+          </header>
+
+          <div class="about-panel-grid">
+            <article class="about-narrative-card reveal">
+              <span>One connecting idea</span>
+              <h3>Understand the signal. Build the system. Make it useful.</h3>
+              <p>
+                My path has moved across audio processing, IT infrastructure, computer networks, multilingual NLP, remote sensing and medical images. The common thread is understanding complex information and turning it into systems people can trust and use.
+              </p>
+              <p>
+                Today, I combine doctoral research, teaching, published work and university-community building—bringing the same care for clear evidence and practical outcomes to each setting.
+              </p>
+            </article>
+
+            <div class="about-fact-stack">
+              <article class="about-fact-card reveal">
+                <span>Current chapter</span>
+                <strong>PhD in Informatics · KTU</strong>
+                <p>Image reconstruction through deep neural networks and signal-processing technologies.</p>
+              </article>
+              <article class="about-fact-card about-fact-card-accent reveal">
+                <span>Working style</span>
+                <strong>Precise, collaborative and direct.</strong>
+                <p>I value careful experiments, honest communication and teams that make every idea stronger.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="about-detail-grid">
+            <section class="language-panel reveal" aria-labelledby="languages-title">
+              <header>
+                <span>Communication</span>
+                <h3 id="languages-title">Five languages</h3>
+              </header>
+              <div class="language-row" aria-label="Languages">
+                <span>Azerbaijani <small>native</small></span>
+                <span>English <small>fluent</small></span>
+                <span>Russian <small>fluent</small></span>
+                <span>Turkish <small>fluent</small></span>
+                <span>Lithuanian <small>conversational</small></span>
+              </div>
+            </section>
+
+            <section class="toolkit-panel reveal" aria-labelledby="toolkit-title">
+              <header>
+                <span>Across research and delivery</span>
+                <h3 id="toolkit-title">Technical toolkit</h3>
+              </header>
+              <div class="skills-cloud" aria-label="Technical skills">
+                <span class="skill skill-large">Python</span>
+                <span class="skill">C#</span>
+                <span class="skill">C</span>
+                <span class="skill">PHP</span>
+                <span class="skill">SQL</span>
+                <span class="skill">MATLAB</span>
+                <span class="skill">PowerShell</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill skill-accent">PyTorch</span>
+                <span class="skill">Agile</span>
+                <span class="skill">Jira</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Routing & Subnetting</span>
+                <span class="skill">Technical Troubleshooting</span>
+                <span class="skill skill-large">Medical Image Classification</span>
+                <span class="skill skill-accent">Wavelet-based Feature Extraction</span>
+                <span class="skill">Multi-scale Image Processing</span>
+                <span class="skill">Image Decomposition</span>
+                <span class="skill">Audio Signal Processing</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-noise" aria-hidden="true"></div>
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <span class="section-kicker">06 · Contact</span>
+            <h2 id="contact-title">Let’s work on a question worth answering.</h2>
+            <p>
+              I am open to research collaborations, academic initiatives and conversations around signal-aware deep learning, image reconstruction and applied AI.
+            </p>
+          </div>
+
+          <div class="contact-actions reveal">
+            <a class="email-link" href="mailto:mahammad.ismayilov@ktu.lt">
+              <span>Email me</span>
+              <strong>mahammad.ismayilov@ktu.lt</strong>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+            </a>
+            <button class="copy-email" type="button" data-copy-email data-email="mahammad.ismayilov@ktu.lt">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+              Copy email
+            </button>
+          </div>
+
+          <div class="social-links reveal" aria-label="Professional profiles">
+            <a href="https://www.linkedin.com/in/mahammad-ismayilov-9aabab1ba/" target="_blank" rel="noreferrer"><span>LinkedIn</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a href="https://orcid.org/0009-0000-0212-7628" target="_blank" rel="noreferrer"><span>ORCID</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a href="https://www.researchgate.net/profile/Mahammad-Ismayilov" target="_blank" rel="noreferrer"><span>ResearchGate</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a href="https://www.instagram.com/maqamedmlg/" target="_blank" rel="noreferrer"><span>Instagram</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a href="https://www.facebook.com/MaqamedMLG/" target="_blank" rel="noreferrer"><span>Facebook</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a href="./Ismayilov_CV.pdf" download><span>Curriculum vitae</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <a class="brand footer-brand" href="#top" aria-label="Back to top"><span class="brand-mark">MI</span></a>
+        <p>Mahammad Ismayilov<br /><span>AI researcher · educator · builder</span></p>
+        <p>Kaunas, Lithuania<br /><span>© <span data-year></span> All rights reserved.</span></p>
+        <a class="back-to-top" href="#top">Back to top <span>↑</span></a>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" data-toast>Email copied to clipboard</div>
+  </body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "name": "Mahammad Ismayilov — Portfolio",
+  "short_name": "Mahammad I.",
+  "description": "AI researcher, junior assistant and KTU PhD candidate working on signal-aware deep learning and image reconstruction.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f2ed",
+  "theme_color": "#3155e7",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
